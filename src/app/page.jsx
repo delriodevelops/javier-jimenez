@@ -78,11 +78,11 @@ export default function PremiumLawFirmLanding() {
                 Defendemos sus derechos con experiencia, dedicación y un compromiso inquebrantable con la justicia.
               </p>
               <div className="flex gap-2 md:gap-8">
-                <a href="#contacto" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-amber-700 duration-300 ease-in-out hover:bg-amber-800">
+                <a href="#contacto" className="hover:scale-110 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-amber-700 duration-300 ease-in-out hover:bg-amber-800">
                   <ion-icon name="call" class="mr-2"></ion-icon>
                   Consulta Gratuita
                 </a>
-                <a href="#servicios" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-amber-400 bg-gray-800 duration-300 ease-in-out hover:bg-gray-700">
+                <a href="#servicios" className="hover:scale-110 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-amber-400 bg-gray-800 duration-300 ease-in-out hover:bg-gray-700">
                   <ion-icon name="list" class="mr-2"></ion-icon>
                   Nuestros Servicios
                 </a>
@@ -123,7 +123,7 @@ export default function PremiumLawFirmLanding() {
                     </li>
                   ))}
                 </ul>
-                <a href="#contacto" className="self-start mt-4 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-amber-700 duration-300 ease-in-out hover:bg-amber-800">
+                <a href="#contacto" className="hover:scale-110 self-start mt-4 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-amber-700 duration-300 ease-in-out hover:bg-amber-800">
                   <ion-icon name="calendar" class="mr-2"></ion-icon>
                   Agendar una Consulta
                 </a>
@@ -152,7 +152,7 @@ export default function PremiumLawFirmLanding() {
                   <ion-icon name={service.icon} class="text-amber-700 text-4xl self-center"></ion-icon>
                   <h3 className="text-xl font-bold">{service.title}</h3>
                   <p className="text-gray-500">{service.description}</p>
-                  <a href="#contacto" className="mt-4 inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-amber-700 bg-amber-100 duration-300 ease-in-out hover:bg-amber-200">
+                  <a href="#contacto" className="hover:scale-110 mt-4 inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-amber-700 bg-amber-100 duration-300 ease-in-out hover:bg-amber-200">
                     <ion-icon name="arrow-forward" class="mr-2"></ion-icon>
                     Más Información
                   </a>
