@@ -169,7 +169,7 @@ export default function PremiumLawFirmLanding() {
                 Contacto
               </h2>
               <p className="max-w-[600px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Para consultas personalizadas y asesoramiento a medida, no dude en ponerse en contacto con nosotros.
+                Para consultas personalizadas y asesoramiento de calidad, no dude en ponerse en contacto con nosotros.
               </p>
             </div>
             <div className="mx-auto max-w-[600px] space-y-4 py-8">
