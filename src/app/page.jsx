@@ -5,8 +5,39 @@ import Script from 'next/script'
 
 export default function PremiumLawFirmLanding() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState('idle')
 
   const navItems = ["Inicio", "Sobre Mí", "Servicios", "Contacto"]
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prevData => ({ ...prevData, [name]: value }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+    }
+    setIsSubmitting(false)
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 text-black">
@@ -22,7 +53,7 @@ export default function PremiumLawFirmLanding() {
           {navItems.map((item) => (
             <a
               key={item}
-              className="py-20 md:py-0 md:bg-white bg-neutral-100 w-full text-center md:w-fit text-sm font-medium text-gray-600 duration-300 ease-in-out hover:text-amber-700 transition-colors"
+              className="py-20 md:py-0 md:bg-white bg-neutral-100 w-full text-center md:w-fit text-lg md:text-md font-medium text-gray-600 duration-300 ease-in-out hover:text-amber-700 transition-colors rounded "
               href={`#${item.toLowerCase().replace(" ", "-")}`}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -46,7 +77,7 @@ export default function PremiumLawFirmLanding() {
               <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Defendemos sus derechos con experiencia, dedicación y un compromiso inquebrantable con la justicia.
               </p>
-              <div className="space-x-4">
+              <div className="flex gap-2 md:gap-8">
                 <a href="#contacto" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-amber-700 duration-300 ease-in-out hover:bg-amber-800">
                   <ion-icon name="call" class="mr-2"></ion-icon>
                   Consulta Gratuita
@@ -138,40 +169,80 @@ export default function PremiumLawFirmLanding() {
                 Contacto
               </h2>
               <p className="max-w-[600px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Para consultas personalizadas y asesoramiento de a medida, no dude en ponerse en contacto con nosotros.
+                Para consultas personalizadas y asesoramiento a medida, no dude en ponerse en contacto con nosotros.
               </p>
             </div>
             <div className="mx-auto max-w-[600px] space-y-4 py-8">
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="relative">
                   <ion-icon name="person" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></ion-icon>
                   <input
                     type="text"
+                    name="name"
                     placeholder="Nombre"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     className="w-full pl-10 pr-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                    required
                   />
                 </div>
                 <div className="relative">
                   <ion-icon name="mail" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></ion-icon>
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     className="w-full pl-10 pr-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                    required
                   />
                 </div>
                 <div className="relative">
                   <ion-icon name="chatbubbles" class="absolute left-3 top-3 text-gray-400"></ion-icon>
                   <textarea
+                    name="message"
                     placeholder="Mensaje"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     rows={4}
                     className="w-full pl-10 pr-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                    required
                   ></textarea>
                 </div>
-                <button type="submit" className="w-full px-5 py-3 text-white bg-amber-700 rounded-md duration-300 ease-in-out hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-gray-900 flex items-center justify-center">
-                  <ion-icon name="send" class="mr-2"></ion-icon>
-                  Enviar Mensaje
-                </button>
+                <div className='flex gap-8'>
+                  <a href="https://api.whatsapp.com/send?phone=34632814194" target='_blank' type='button' className='flex items-center gap-2 text-3xl p-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 hover:scale-110 duration-300 ease-in-out w-full justify-center'>
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    <span className='text-base'>+34 632 814 194</span>
+                  </a>
+                  <button
+                    type="submit"
+                    className="hover:scale-110 w-full px-5 py-3 text-white bg-amber-700 rounded-md duration-300 ease-in-out hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-gray-900 flex items-center justify-center"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <span className="flex items-center">
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Enviando...
+                      </span>
+                    ) : (
+                      <>
+                        <ion-icon name="send" class="mr-2"></ion-icon>
+                        Enviar Mensaje
+                      </>
+                    )}
+                  </button>
+                </div>
               </form>
+              {submitStatus === 'success' && (
+                <p className="text-green-400 text-center mt-4">¡Mensaje enviado con éxito!</p>
+              )}
+              {submitStatus === 'error' && (
+                <p className="text-red-400 text-center mt-4">Error al enviar el mensaje. Por favor, inténtelo de nuevo.</p>
+              )}
             </div>
           </div>
         </section>
