@@ -76,7 +76,7 @@ export default function PremiumLawFirmLanding() {
               <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Defendemos sus derechos con experiencia, dedicación y un compromiso inquebrantable con la justicia.
               </p>
-              <div className="flex gap-2 md:gap-8">
+              <div className="flex gap-2 md:gap-8 flex-col md:flex-row">
                 <a href="#contacto" className="hover:scale-110 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-amber-700 duration-300 ease-in-out hover:bg-amber-800">
                   <ion-icon name="call" class="mr-2"></ion-icon>
                   Consulta Gratuita
@@ -209,7 +209,7 @@ export default function PremiumLawFirmLanding() {
                     required
                   ></textarea>
                 </div>
-                <div className='flex gap-8'>
+                <div className='flex gap-8 flex-col-reverse md:flex-row'>
                   <a href="https://api.whatsapp.com/send?phone=34632814194" target='_blank' type='button' className='flex items-center gap-2 text-3xl p-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 hover:scale-110 duration-300 ease-in-out w-full justify-center'>
                     <ion-icon name="logo-whatsapp"></ion-icon>
                     <span className='text-base'>+34 632 814 194</span>
