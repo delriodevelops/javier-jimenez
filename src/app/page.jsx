@@ -43,7 +43,6 @@ export default function PremiumLawFirmLanding() {
     <div className="flex flex-col min-h-screen bg-gray-50 text-black">
       <Script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module" />
       <Script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" noModule />
-
       <header className="px-4 lg:px-6 h-20 flex items-center border-b border-gray-200 bg-white">
         <div className="flex items-center justify-center">
           <ion-icon name="scale" class="text-amber-700 text-3xl"></ion-icon>
