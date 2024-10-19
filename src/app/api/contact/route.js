@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, message, subject, country, phone, newsletter } = await req.json();
 
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
@@ -17,8 +17,8 @@ export async function POST(req) {
 
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
-      to: 'somarixcod@gmail.com',
-      subject: `Mensaje de ${name} vía formulario web`,
+      to: 'escudolealjpt@gmail.com',
+      subject,
       text: `Nuevo mensaje del formulario web:
     
     Nombre: ${name}
