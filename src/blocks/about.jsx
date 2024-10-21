@@ -22,9 +22,9 @@ const About = () => {
           </div>
           <div className="lg:col-span-3 grid lg:grid-cols-3 gap-8">
             {[
-              { icon: "flash-outline", title: "Eficiencia", description: "Soluciones legales ágiles y efectivas, optimizadas para la era digital." },
-              { icon: "trophy-outline", title: "Excelencia", description: "Compromiso inquebrantable con la calidad y la innovación jurídica." },
-              { icon: "people-outline", title: "Empatía", description: "Enfoque centrado en el cliente, con un trato personalizado y tecnológico." }
+              { icon: "flash-outline", title: "Eficiencia", description: "Soluciones Legales Ágiles y Efectivas, Diseñadas para el Entorno Digital." },
+              { icon: "trophy-outline", title: "Excelencia", description: "Compromiso Inquebrantable con la Excelencia y la calidad Jurídica." },
+              { icon: "people-outline", title: "Empatía", description: "Centrados en el cliente, con un trato personalizado que integra tecnología para una experiencia legal efectiva." }
             ].map((value, index) => (
               <div key={index} className="text-balanced p-8 rounded-xl transition-all duration-300 ease-in-out shadow-lg shadow-gold-200/30 hover:shadow-xl hover:shadow-gold-200/30 bg-gray-700 hover:scale-105 group animate-on-scroll " style={{ animationDelay: `${index * 0.2}s` }}>
                 <ion-icon name={value.icon} class="text-6xl text-gold-200 mb-6 transition-transform duration-300 group-hover:scale-110"></ion-icon>

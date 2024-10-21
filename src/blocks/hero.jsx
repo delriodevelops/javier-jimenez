@@ -14,10 +14,10 @@ const Hero = () => {
             height={350}
           />
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
-            Justicia Innovadora<br />para un Mundo Digital
+            Tu Aliado Legal<br />en el Entorno Digital
           </h1>
           <p className="text-xl lg:text-2xl mb-8 text-gray-300 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Escudo Leal JPT: Donde la experiencia legal se fusiona con la vanguardia tecnológica.
+            <b>Escudo Leal JPT</b>: Su Aliado de Confianza en el Ámbito Legal, Siempre a un Click de Distancia.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <a href="#contacto" className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-full text-gray-900 bg-gradient-to-r from-gold-200 to-gold-300 hover:from-gold-200 hover:to-gold-400 transition duration-300 ease-in-out transform hover:scale-105">

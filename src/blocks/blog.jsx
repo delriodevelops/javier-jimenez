@@ -10,12 +10,12 @@ const Blog = () => {
         <div className="flex flex-col lg:flex-row gap-8 items-center justify-evenly my-36 flex-wrap">
           {[
             { href: "https://www.linkedin.com/in/javier-jim%C3%A9nez-p%C3%A9rez-tom%C3%A9/", icon: "logo-linkedin" },
-            { href: "https://www.instagram.com/javijimenez16/", icon: "logo-instagram" },
+            { href: "https://www.instagram.com/escudolealjpt/", icon: "logo-instagram" },
             { href: "tiktok", icon: "logo-tiktok" },
-            { href: "https://www.youtube.com/@conquer_mind_1", icon: "logo-youtube" },
+            { href: "https://www.youtube.com/@EscudoLealJPT", icon: "logo-youtube" },
           ].map((link, index) => (
             <a target='_blank' href={link.href} key={index} className="p-8 rounded-xl overflow-hidden transition-all duration-300 ease-in-out shadow-lg shadow-gold-200/30 hover:shadow-xl hover:shadow-gold-200/30 bg-gray-700 hover:scale-125 group animate-on-scroll" style={{ animationDelay: `${index * 0.2}s` }}>
-              <ion-icon name={link.icon} class="text-gold-200 text-[300px]"></ion-icon>
+              <ion-icon name={link.icon} class="text-gold-200 text-[100px]"></ion-icon>
             </a>
           ))}
         </div>

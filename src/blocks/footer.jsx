@@ -43,13 +43,13 @@ const Footer = () => {
               <a href="https://www.linkedin.com/in/javier-jim%C3%A9nez-p%C3%A9rez-tom%C3%A9/" target='_blank' className="text-gray-400 hover:text-gold-200 transition duration-300">
                 <ion-icon name="logo-linkedin" class="text-2xl"></ion-icon>
               </a>
-              <a href="https://www.instagram.com/javijimenez16/" target='_blank' className="text-gray-400 hover:text-gold-200 transition duration-300">
+              <a href="https://www.instagram.com/escudolealjpt/" target='_blank' className="text-gray-400 hover:text-gold-200 transition duration-300">
                 <ion-icon name="logo-instagram" class="text-2xl"></ion-icon>
               </a>
               <a href="#" className="text-gray-400 hover:text-gold-200 transition duration-300">
                 <ion-icon name="logo-tiktok" class="text-2xl"></ion-icon>
               </a>
-              <a href="https://www.youtube.com/@conquer_mind_1" target='_blank' className="text-gray-400 hover:text-gold-200 transition duration-300">
+              <a href="https://www.youtube.com/@EscudoLealJPT" target='_blank' className="text-gray-400 hover:text-gold-200 transition duration-300">
                 <ion-icon name="logo-youtube" class="text-2xl"></ion-icon>
               </a>
             </div>

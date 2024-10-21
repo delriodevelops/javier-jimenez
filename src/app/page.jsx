@@ -49,40 +49,6 @@ export default function PremiumLawFirmLanding() {
 
   return (
     <>
-      <Head>
-        <title>Escudo Leal JPT - Bufete de Abogados Vanguardista</title>
-        <meta name="description" content="Escudo Leal JPT: Innovación legal en derecho mercantil, protección de datos y propiedad intelectual. Experiencia y tecnología a tu servicio." />
-        <meta name="keywords" content="abogados, derecho mercantil, protección de datos, propiedad intelectual, innovación legal, Escudo Leal JPT" />
-        <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-        <style>{`
-          body {
-            font-family: 'Poppins', sans-serif;
-          }
-          @keyframes fadeInUp {
-            from {
-              opacity: 0;
-              transform: translateY(20px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          .animate-fade-in-up {
-            animation: fadeInUp 0.6s ease-out forwards;
-          }
-          .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-          }
-          .animate-on-scroll.animate-fade-in-up {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        `}</style>
-      </Head>
       <Script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module" />
       <Script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" noModule />
 
@@ -112,7 +78,7 @@ export default function PremiumLawFirmLanding() {
                   </a>
                 ))}
               </div>
-              
+
             </nav>
           </div>
         </header>
