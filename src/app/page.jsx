@@ -12,7 +12,7 @@ import Footer from '@/blocks/footer'
 
 export default function PremiumLawFirmLanding() {
   const [activeSection, setActiveSection] = useState('inicio')
-  const navItems = ["Inicio", "Quiénes somos", "Qué hacemos", "Contacto"]
+  const navItems = ["Inicio", "Quienes somos", "Que hacemos", "Contacto"]
 
   useEffect(() => {
     const handleScroll = () => {
