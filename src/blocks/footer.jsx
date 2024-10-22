@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Footer = () => {
-  const navItems = ["Inicio", "Quienes somos", "Que hacemos", "Contacto"]
+  const navItems = ["Inicio", "Quiénes somos", "Qué hacemos", "Contacto"]
 
 
   return (

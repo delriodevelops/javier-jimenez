@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="quienes-somos" className="py-24 relative overflow-hidden bg-gray-800">
       <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-4xl lg:text-5xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-gold-100 to-gold-300 animate-on-scroll">Quienes Somos</h2>
+        <h2 className="text-4xl lg:text-5xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-gold-100 to-gold-300 animate-on-scroll">Quiénes Somos</h2>
         <div className="flex flex-col gap-12">
           <div className="lg:col-span-3 flex flex-col items-center animate-on-scroll">
             <div className="w-48 h-48 rounded-full overflow-hidden mb-6">

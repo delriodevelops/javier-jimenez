@@ -142,7 +142,7 @@ const Contact = () => {
                     required
                   />
                   <label htmlFor="privacyPolicy" onClick={() => { setFormData({ ...formData, privacyPolicy: !formData.privacyPolicy }) }} className='text-sm'>
-                    Acepto los <button type='button' className='font-bold text-blue-500 pl-1' onClick={() => openModal('terms')}>términos de uso</button>. Por favor, lea nuestras
+                    Acepto que he leído los <button type='button' className='font-bold text-blue-500 pl-1' onClick={() => openModal('terms')}>términos y condiciones y el aviso legal</button>. Por favor, lea nuestras
                     <button type='button' className='font-bold text-blue-500 pl-1' onClick={() => openModal('privacy')}>politicas de privacidad</button> para entender como manejamos su información personal.
                   </label>
                 </div>
@@ -161,19 +161,109 @@ const Contact = () => {
               {showModal.isOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ">
                   <div className="bg-gray-800 p-8 rounded-lg w-11/12 max-w-4xl max-h-[80dvh] overflow-y-auto z-50">
-                    <h2 className="text-2xl font-bold mb-4 text-white">
-                      {showModal.type === 'terms' ? 'Términos de Uso' : 'Políticas de Privacidad'}
-                    </h2>
                     <div className="text-gray-300 mb-6">
                       {
                         showModal.type === 'terms'
-                          ? 'Términos de Uso'
+                          ? (
+                            <div class="container mx-auto px-6 py-12">
+                              <h1 class="text-3xl font-semibold mb-4 ">Términos y Condiciones de Uso</h1>
+                              <p class="mb-6">Bienvenido al sitio web de ESCUDO LEAL JPT (en adelante, “el Sitio Web”). A continuación, se describen los Términos y Condiciones de uso que regulan el acceso y uso de este sitio. Al acceder y navegar por el Sitio Web, usted acepta cumplir con estos términos. Si no está de acuerdo con alguna parte, debe abstenerse de utilizarlo.</p>
+
+                              <h2 class="text-2xl font-semibold mb-2">1. Objeto</h2>
+                              <p class="mb-6">El presente documento regula las condiciones generales de uso del Sitio Web, así como los derechos y obligaciones de los usuarios en relación con los servicios y contenidos ofrecidos a través del mismo.</p>
+
+                              <h2 class="text-2xl font-semibold mb-2">2. Titular del sitio web</h2>
+                              <p class="mb-6">El responsable y titular del Sitio Web es Javier Jiménez Pérez-Tomé (en adelante, “el Titular”), con correo de contacto: <a href="mailto:escudolealjpt@gmail.com" class="text-blue-500 hover:underline">escudolealjpt@gmail.com</a>.</p>
+
+                              <h2 class="text-2xl font-semibold mb-2">3. Acceso y uso del Sitio Web</h2>
+                              <p class="mb-6">El acceso al Sitio Web es gratuito y no requiere suscripción ni registro previo. Sin embargo, algunos servicios pueden requerir que los usuarios proporcionen ciertos datos personales, que serán tratados conforme a la Política de Privacidad del sitio.</p>
+                              <p class="mb-6">El usuario se compromete a utilizar el Sitio Web de forma diligente, legal y responsable, evitando realizar cualquier actividad que pueda dañar la funcionalidad, la seguridad o los derechos de terceros.</p>
+
+                              <h2 class="text-2xl font-semibold mb-2">4. Propiedad intelectual e industrial</h2>
+                              <p class="mb-6">Todos los contenidos del Sitio Web, incluidos textos, gráficos, logotipos, imágenes, vídeos, software y demás elementos (en adelante, “los Contenidos”), son propiedad exclusiva del Titular o se utilizan bajo licencia de terceros con todos los derechos reservados.</p>
+                              <p class="mb-6">Queda prohibida la reproducción, distribución o uso de los Contenidos sin autorización expresa del Titular.</p>
+
+                              <h2 class="text-2xl font-semibold mb-2">5. Política de enlaces</h2>
+                              <p class="mb-6">El Sitio Web puede contener enlaces a sitios web de terceros. El Titular no se hace responsable de los contenidos o servicios ofrecidos en estos sitios enlazados, ni garantiza la disponibilidad o legalidad de los mismos.</p>
+
+                              <h2 class="text-2xl font-semibold mb-2">6. Exclusión de responsabilidad</h2>
+                              <p class="mb-6">El Titular no será responsable de los daños o perjuicios derivados del uso del Sitio Web, tales como fallos técnicos, virus o errores en los contenidos, más allá de lo establecido por la legislación aplicable.</p>
+                              <p class="mb-6">El Sitio Web se ofrece "tal cual" y "según disponibilidad", sin garantías de ningún tipo, explícitas o implícitas.</p>
+
+                              <h2 class="text-2xl font-semibold mb-2">7. Modificaciones</h2>
+                              <p class="mb-6">El Titular se reserva el derecho a modificar, actualizar o eliminar en cualquier momento y sin previo aviso los Términos y Condiciones, así como cualquier contenido o servicio del Sitio Web.</p>
+
+                              <h2 class="text-2xl font-semibold mb-2">8. Ley aplicable y jurisdicción</h2>
+                              <p class="mb-6">Estos Términos y Condiciones se regirán e interpretarán de acuerdo con la legislación española. Para cualquier disputa o reclamación derivada de su uso, ambas partes se someterán a los juzgados y tribunales de Madrid, España.</p>
+                              <h1 class="text-4xl font-bold mb-6">Aviso Legal</h1>
+
+                              <p class="mb-4">
+                                El presente aviso (en adelante, el “Aviso Legal”) regula el uso del servicio del portal web
+                                <a href="https://www.escudolealjpt.com" class="text-blue-600 underline">https://www.escudolealjpt.com</a>
+                                (en adelante, el “Portal” o la “Web”), que ESCUDO LEAL JPT despacho de abogados (en adelante, “ESCUDO LEAL JPT”) pone a disposición de los usuarios de internet.
+                              </p>
+                              <p class="mb-4">
+                                La utilización de la Web implica la condición de usuario de la web (en adelante, el “Usuario”) y la aceptación plena y sin reservas de todas y cada una de las disposiciones incluidas en este Aviso Legal en la versión publicada por ESCUDO LEAL JPT en el momento mismo en que el Usuario accede a la Web. En consecuencia, el Usuario debe leer este Aviso Legal cada vez que se proponga utilizar la web, ya que tanto el Web como el Aviso Legal pueden sufrir modificaciones.
+                              </p>
+
+                              <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">1. Información legal</h2>
+                              <p class="mb-4">
+                                ESCUDO LEAL JPT Despacho de Abogados, correo electrónico de contacto <a href="mailto:escudolealjpt@gmail.com" class="text-blue-600 underline">escudolealjpt@gmail.com</a>, es titular del nombre de dominio
+                                <a href="https://www.escudolealjpt.com" class="text-blue-600 underline">https://www.escudolealjpt.com</a> y de las páginas de internet a las que se accede a través de dicho dominio.
+                              </p>
+                              <p class="mb-4">
+                                El acceso a la página web es gratuito, sin perjuicio del coste de conexión a través de la red de telecomunicaciones correspondiente para el Usuario. Los servicios jurídicos prestados por el despacho tienen el precio que se indica en la correspondiente oferta comercial y no se ofrecen o prestan a través de la Web.
+                              </p>
+
+                              <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">2. Propiedad intelectual e industrial</h2>
+                              <p class="mb-4">
+                                Todos los contenidos del Portal (textos, fotografías, imágenes, software, códigos fuente, etc.) son propiedad intelectual de ESCUDO LEAL JPT o de terceros, y no podrán ser reproducidos, copiados, transmitidos, distribuidos o manipulados sin la autorización previa y por escrito de ESCUDO LEAL JPT, manteniendo siempre el “copyright” intacto y cualquier otro indicador de la propiedad intelectual.
+                              </p>
+                              <p class="mb-4">
+                                Cualquier uso o modificación no autorizado de los contenidos será considerado una violación de las leyes internacionales de “copyright”, que protegen los derechos de autor.
+                              </p>
+
+                              <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">3. Condiciones de uso del portal</h2>
+                              <h3 class="text-xl font-semibold text-gray-800 mb-2">3.1 Obligación de hacer un uso correcto del Portal</h3>
+                              <p class="mb-4">
+                                El Usuario se compromete a utilizar el Portal conforme a la Ley, este Aviso Legal, la moral, las buenas costumbres y el orden público. El Usuario será responsable de los daños y perjuicios que puedan causarse como consecuencia del incumplimiento de esta obligación, tanto frente a ESCUDO LEAL JPT como frente a terceros.
+                              </p>
+
+                              <h3 class="text-xl font-semibold text-gray-800 mb-2">3.2 Introducción de enlaces al Portal</h3>
+                              <p class="mb-4">
+                                Los usuarios de internet que deseen introducir enlaces desde sus propias páginas web al Portal deberán cumplir con las siguientes condiciones:
+                              </p>
+                              <ul class="list-disc list-inside mb-4">
+                                <li>El enlace solo permitirá el acceso a la página de inicio del Portal, sin reproducirla de ninguna forma.</li>
+                                <li>No se podrán establecer marcos o frames que oculten la identidad del Portal ni que permitan la visualización de sus contenidos junto a otros ajenos.</li>
+                                <li>No se podrán realizar manifestaciones falsas, inexactas o incorrectas sobre ESCUDO LEAL JPT, sus socios o empleados.</li>
+                                <li>El establecimiento del enlace no implica la existencia de relaciones entre ESCUDO LEAL JPT y el propietario de la página web donde se establezca, ni la aceptación de sus contenidos o servicios.</li>
+                              </ul>
+
+                              <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">4. Limitación de responsabilidad</h2>
+                              <h3 class="text-xl font-semibold text-gray-800 mb-2">4.1 Uso del Portal</h3>
+                              <p class="mb-4">
+                                El Usuario es consciente de que utiliza el Portal bajo su exclusiva responsabilidad.
+                              </p>
+
+                              <h3 class="text-xl font-semibold text-gray-800 mb-2">4.2 Seguridad</h3>
+                              <p class="mb-4">
+                                El Usuario debe ser consciente de que las medidas de seguridad de los sistemas informáticos en internet no son completamente fiables.
+                              </p>
+
+                              <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">5. Legislación aplicable</h2>
+                              <p class="mb-4">
+                                El presente Aviso Legal se rige por la legislación española.
+                              </p>
+                            </div>
+
+                          )
                           : (
-                            <div className="modal-body p-6 rounded-lg shadow-lg">
+                            <div className="modal-body p-6 rounded-lg shadow-lg text-white">
                               <p className="mb-4">
                                 La presente <strong>Política de Privacidad</strong> describe el tratamiento de los datos personales que
-                                <strong>Escudo Leal JPT Despacho de Abogados</strong> (en adelante, “<strong>ESCUDO LEAL JPT</strong>”) realiza sobre los usuarios de su página web www..com
-                                (en adelante, la “<strong>Web</strong>”). Cabe mencionar que la sección de la Web dedicada a <strong>procesos de selección</strong> cuenta con una política de privacidad específica.
+                                <strong>Escudo Leal JPT Despacho de Abogados</strong> (en adelante, “<strong>ESCUDO LEAL JPT</strong>”) realiza sobre los usuarios de su página web https://www.escudolealjpt.com
+                                (en adelante, la “<strong>Web</strong>”).
                               </p>
                               <p className="mb-4">
                                 Al navegar por la Web, no es necesario que proporcione datos personales ni que se registre como usuario. Sin embargo, en la Web encontrará formularios para
@@ -266,7 +356,7 @@ const Contact = () => {
                 >
                   {isSubmitting ? (
                     <span className="flex items-center">
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>

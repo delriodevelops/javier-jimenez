@@ -22,7 +22,10 @@ export async function POST(req) {
       text: `Nuevo mensaje del formulario web:
     
     Nombre: ${name}
+    ${phone ? 'Telefono: ' + phone : ''} 
     Email: ${email}
+    Ciudad y país: ${country}
+    Newsletter: ${newsletter ? 'Sí' : 'No'}
     Mensaje:
     ${message}
     
@@ -70,6 +73,9 @@ export async function POST(req) {
             <h2>Nuevo mensaje del formulario web</h2>
             <p><strong>Nombre:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Teléfono:</strong> ${phone}</p>
+            <p><strong>Ciudad y país:</strong> ${country}</p>
+            <p><strong>Newsletter:</strong> ${newsletter ? 'Sí' : 'No'}</p>
             <p><strong>Mensaje:</strong></p>
             <p>${message}</p>
             <div class="footer">

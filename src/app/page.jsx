@@ -12,7 +12,7 @@ import Footer from '@/blocks/footer'
 
 export default function PremiumLawFirmLanding() {
   const [activeSection, setActiveSection] = useState('inicio')
-  const navItems = ["Inicio", "Quienes somos", "Que hacemos", "Contacto"]
+  const navItems = ["Inicio", "Quiénes somos", "Qué hacemos", "Contacto"]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,7 +64,7 @@ export default function PremiumLawFirmLanding() {
                   width={50}
                   height={50}
                 />
-                <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gold-100 to-gold-300">Escudo Leal JPT</span>
+                <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gold-100 to-gold-300 text-gradient">Escudo Leal JPT</span>
               </div>
               <div className="hidden md:flex space-x-8">
                 {navItems.map((item) => (

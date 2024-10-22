@@ -21,13 +21,13 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    url: 'https://www.tusitio.com',
+    url: 'https://www.escudolealjpt.com',
     title: 'Escudo Leal JPT - Consultoría Jurídica Arbitraje, Derecho Financiero y más',
     description: 'Asesoría legal especializada en arbitraje, derecho financiero, derecho laboral y más. Servicios jurídicos premium para empresas y particulares.',
     siteName: 'Consultoría Jurídica',
     images: [
       {
-        url: 'https://www.tusitio.com/escudo-leal-jpt.png',
+        url: 'https://www.escudolealjpt.com/escudo-leal-jpt.png',
         width: 1200,
         height: 630,
         alt: 'Escudo Leal JPT - Consultoría Jurídica Arbitraje, Derecho Financiero y más',
@@ -38,13 +38,13 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Escudo Leal JPT - Consultoría Jurídica Arbitraje, Derecho Financiero y más',
     description: 'Asesoría legal especializada en arbitraje, derecho financiero, derecho laboral y más. Servicios jurídicos premium para empresas y particulares.',
-    images: ['https://www.tusitio.com/escudo-leal-jpt.png'],
+    images: ['https://www.escudolealjpt.com/escudo-leal-jpt.png'],
   },
   icons: {
     icon: '/favicon.ico',
   },
   alternates: {
-    canonical: 'https://www.tusitio.com',
+    canonical: 'https://www.escudolealjpt.com',
   },
 };
 
