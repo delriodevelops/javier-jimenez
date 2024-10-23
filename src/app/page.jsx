@@ -58,6 +58,7 @@ export default function PremiumLawFirmLanding() {
             <nav className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <Image
+                  alt='logo de escudo leal JPT'
                   style={{ background: "#fff" }}
                   className='mx-auto rounded-full'
                   src="/image.svg"

@@ -7,6 +7,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10 mb-24">
         <div className="max-w-4xl mx-auto text-center">
           <Image
+            alt="Logo escudo leal JPT"
             style={{ background: "#fff" }}
             className='mx-auto rounded-full mb-16'
             src="/image.svg"

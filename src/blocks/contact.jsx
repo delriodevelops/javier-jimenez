@@ -141,9 +141,8 @@ const Contact = () => {
                     className='mt-1'
                     required
                   />
-                  <label htmlFor="privacyPolicy" onClick={() => { setFormData({ ...formData, privacyPolicy: !formData.privacyPolicy }) }} className='text-sm'>
-                    Acepto que he leído los <button type='button' className='font-bold text-blue-500 pl-1' onClick={() => openModal('terms')}>términos y condiciones y el aviso legal</button>. Por favor, lea nuestras
-                    <button type='button' className='font-bold text-blue-500 pl-1' onClick={() => openModal('privacy')}>politicas de privacidad</button> para entender como manejamos su información personal.
+                  <label htmlFor="privacyPolicy" onClick={() => { setFormData({ ...formData, privacyPolicy: !formData.privacyPolicy }) }} className='text-sm inline'>
+                    Acepto que he leído los <button type='button' className='font-bold inline text-blue-500 ' onClick={() => openModal('terms')}>términos y condiciones y el aviso legal</button>. Por favor, lea nuestras <button type='button' className='font-bold text-blue-500 inline' onClick={() => openModal('privacy')}>politicas de privacidad</button> para entender como manejamos su información personal.
                   </label>
                 </div>
                 <div className='flex gap-2 items-start mt-2 text-gray-200'>
